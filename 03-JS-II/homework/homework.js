@@ -128,7 +128,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero % 3 == 0 && numero % 5 == 0 ){
+  if(numero % 15 == 0 ){
     return "fizzbuzz";
   }else if(numero % 3 == 0){
     return "fizz";
@@ -164,11 +164,12 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   if(numero != 1 && numero != 0){
-    for (let index = 2; index < numero/2; index++) {
+    for (let index = 2; index < numero; index++) {
       if (numero % index == 0) {
-        return true;
+        return false;
       }   
     }
+    return true;
   }else{
     return false;
   }
@@ -194,8 +195,10 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  for (let index = 0; index <= 60; index++) {
-     resultado[index] = 6 * index;   
+
+  let resultado = []
+  for (let i = 0; i < 11; i++) {
+    resultado.push(6 * i)
   }
   return resultado
 }
@@ -214,10 +217,11 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  i = 0
   do{
-    i += 1;
+    i = i +1;
     numero = numero + 5;
-  }while(i <= 8)
+  }while(i < 8)
   return numero;
 }
 
