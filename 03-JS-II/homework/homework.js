@@ -128,13 +128,10 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero % 15 == 0 ){
-    return "fizzbuzz";
-  }else if(numero % 3 == 0){
-    return "fizz";
-  }else if(numero % 5 == 0){
-    return "buzz";
-  }
+  if(numero % 15 === 0) return 'fizzbuzz';
+  if(numero % 3 === 0) return 'fizz';
+  if(numero % 5 === 0) return 'buzz';
+  return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -206,11 +203,10 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if(numero.length == 3){
-    return true;
-  }else{
-    return false;
+  if(numero > 99 && numero < 1000){
+    return true
   }
+  return false
 }
 
 function doWhile(numero) {
