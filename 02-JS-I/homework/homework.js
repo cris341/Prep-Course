@@ -97,7 +97,7 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  retutn (num % 2) === 0;
+  retutn (num % 2) == 0;
   
 }
 
@@ -113,13 +113,13 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return Math.pow(2, 2);
+  return Math.pow(num, 2);
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return Math.pow(2,3)
+  return Math.pow(num,3)
 }
 
 function elevar(num, exponent) {
@@ -188,21 +188,21 @@ function obtenerSaludo(nombre) {
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  
+  return alto * ancho; 
 }
 
 
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  
+  return lado * 4;
 }
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  return base * altura
+  return base * altura;
 
 }
 
@@ -211,7 +211,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  return euro * 1.20
+  return euro * 1.20;
 }
 
 
@@ -227,7 +227,7 @@ function esVocal(letra){
   if(letra === "a" && letra === "e" && letra === "i" && letra === "o" && letra === "u"){
     return "Es vocal";
   }else{
-    return "Dato incorrecto"
+    return "Dato incorrecto";
   }
 
 
