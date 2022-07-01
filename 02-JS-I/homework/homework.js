@@ -97,7 +97,11 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  retutn (num % 2) == 0;
+  if( num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
   
 }
 
@@ -182,7 +186,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "Hola "+ nombre;
+  return `Hola ${nombre}!`;
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -202,7 +206,7 @@ function retornarPerimetro(lado){
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  return base * altura;
+  return (base * altura)/2;
 
 }
 
@@ -224,7 +228,7 @@ function esVocal(letra){
   if(letra.length > 1){
     return "Dato incorrecto";
   }
-  if(letra === "a" && letra === "e" && letra === "i" && letra === "o" && letra === "u"){
+  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
     return "Es vocal";
   }else{
     return "Dato incorrecto";
