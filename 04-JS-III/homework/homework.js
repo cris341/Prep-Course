@@ -38,7 +38,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  return array.push(elemento);
+  array.push(elemento)
+  return array;
 }
 
 
@@ -47,7 +48,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  return array.unshift(elemento);
+  array.unshift(elemento)
+  return array;
 }
 
 
@@ -58,11 +60,11 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
   var element = "";
-  for (index = 0; index < array.length; index++) {
+  for (index = 0; index < palabras.length; index++) {
     if(index === 0){
-      element = array[index];
+      element = palabras[index];
     }else{
-      element = element +" "+array[index];
+      element = element +" "+palabras[index];
     }       
   }
   return element;
@@ -88,8 +90,8 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
     element = 0;
-  for (let index = 0; index < array.length; index++) {
-     element = element + array[index];
+  for (let index = 0; index < numeros.length; index++) {
+     element = element + numeros[index];
     
   }
   return element;
@@ -101,10 +103,10 @@ function promedioResultadosTest(resultadosTest) {
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
   total = 0;
-  for (let index = 0; index < array.length; index++) {
-    total = total + array[index];
+  for (let index = 0; index < resultadosTest.length; index++) {
+    total = total + resultadosTest[index];
   }
-  promedio = total/(array.length-1);
+  promedio = total/(resultadosTest.length);
   return promedio;
 }
 
@@ -114,7 +116,7 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
   numMayor = 0;
-  for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < numeros.length; index++) {
     if (numeros[index] > numeros[numMayor]) {
       numMayor = numeros[index];
     }  
@@ -125,7 +127,7 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
   if( arguments.length === 0){return 0}
   if( arguments.length < 2){return arguments[0]}
@@ -182,8 +184,8 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  for (let index = 0; index < array.length; index++) {
-    if (arreglo[0] =! areglo[index] ) {
+  for (let index = 0; index < arreglo.length; index++) {
+    if (arreglo[0] !== arreglo[index] ) {
       return false;
     }    
   }
@@ -205,7 +207,7 @@ function mesesDelAño(array) {
       }
     }    
   }
-  return false;
+  return "No se encontraron los meses pedidos";
 }
 
 
@@ -231,9 +233,10 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  element = [numero]
+  element = [];
   for (let index = 0; index < 10; index++) {
-    element.push(numero[index] + 2); 
+    numero = numero+2
+    element.push(numero); 
     if (element[index] === 10) {
       break;
     }else if(index == 9){
@@ -251,12 +254,13 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-  element = [numero]
+  element = [];
   for (let index = 0; index < 10; index++) {
-    if (index ==5) {
+    if (index ===5) {
       continue;
     }
-    element.push(numero[index] + 2); 
+    numero = numero + 2;
+    element.push(numero); 
   }
   return element;
 }
